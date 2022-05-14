@@ -17,10 +17,6 @@ with open('data_scrapy.csv','w') as s:
 
 class careerSpider(scrapy.Spider):
 
-    name = 'myntraSpider'
-    allowed_domains = ['myntra.com']
-    # start_urls = ["https://school.careers360.com/schools/schools-in-india?page={page}".format(page=page) 
-    #               for page in range(1, pages+1)]
     start_urls = ['https://school.careers360.com/schools/schools-in-india']
     for i in range(2,pages+1):
         start_urls.append('https://school.careers360.com/schools/schools-in-india?page=' + str(i))  
